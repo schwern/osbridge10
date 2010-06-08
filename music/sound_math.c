@@ -81,7 +81,7 @@ static int my_callback(
 
 void sing(const char* s) {
     FILE* say = popen("say -v cello","w");
-    fprintf(say,s);
+    fprintf(say,"%s", s);
     pclose(say);
 }
 
