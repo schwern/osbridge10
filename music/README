@@ -1,0 +1,11 @@
+To use:
+
+   1. Install the portaudio C library
+   2. Run "make" to build sound_math
+      2a. Fix anything that went wrong in the compilation
+   3. Run "./sound_math heterodyne" to run a basic system check.
+      It should beep and bloop and print out things like "Heterodyne...ioslate..."
+   4. Run "./sound_math input"
+   5. Whistle, play an instrument or any other means to input tones.
+      5a. Yes, really, input is with sound.
+   6. Enjoy!
