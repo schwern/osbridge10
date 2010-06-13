@@ -79,10 +79,18 @@ static int my_callback(
     return paContinue;
 }
 
+#define quote_macro(s) str(s)
+#define str(s) #s
+
 void sing(const char* s) {
-    FILE* say = popen("say -v cello","w");
-    fprintf(say,"%s", s);
-    pclose(say);
+    FILE* say = popen(quote_macro(SPEECH_CMD), "w");
+    if( say == NULL ) {
+        printf("%s", s);
+    }
+    else {
+        fprintf(say,"%s", s);
+        pclose(say);
+    }
 }
 
 #define Close_approximation 1e-4
